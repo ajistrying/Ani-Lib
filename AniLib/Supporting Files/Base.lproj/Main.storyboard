@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nW2-dN-vc6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uaj-qy-ld5">
+            <objects>
+                <tabBarController id="nW2-dN-vc6" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AHn-2h-1YQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7M5-Rz-xVx" kind="relationship" relationship="viewControllers" id="vfw-9c-OSj"/>
+                        <segue destination="hve-WD-ciM" kind="relationship" relationship="viewControllers" id="iP1-fI-YSN"/>
+                        <segue destination="YFf-ug-MIn" kind="relationship" relationship="viewControllers" id="VQc-s4-n1U"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNy-9P-rEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="468"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="WRl-qw-POr">
+            <objects>
+                <viewController id="7M5-Rz-xVx" customClass="HomeViewController" customModule="AniLib" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Tq-Be-2V9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="G3b-dY-Idc" userLabel="Logo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aTj-DS-bAy"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wmA-Wg-sL2" userLabel="AnimeCollectionView">
+                                <rect key="frame" x="0.0" y="194" width="414" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="f6s-cJ-P9h"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZWv-zr-RhH">
+                                    <size key="itemSize" width="186" height="196"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="animeCollectionCell" id="91A-1R-mgD">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="196"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nH0-rT-OaX">
+                                            <rect key="frame" x="0.0" y="0.0" width="186" height="196"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Trending Anime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2e-YZ-cRA">
+                                <rect key="frame" x="40" y="144" width="334" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zK5-cy-4qf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Trending Manga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gg-UB-opa">
+                                <rect key="frame" x="40" y="409" width="334" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="53n-aW-MGI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FCA-U1-nX6" userLabel="MangaCollectionView">
+                                <rect key="frame" x="0.0" y="459" width="414" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="l7m-7T-ccX"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4me-pX-lTO">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="animeCollectionCell" id="zhK-HN-ihO">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="00K-j5-uDv">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="p2e-YZ-cRA" firstAttribute="top" secondItem="G3b-dY-Idc" secondAttribute="bottom" id="CCX-Au-b3K"/>
+                            <constraint firstItem="FCA-U1-nX6" firstAttribute="top" secondItem="7Gg-UB-opa" secondAttribute="bottom" id="FC1-fC-ChE"/>
+                            <constraint firstItem="wmA-Wg-sL2" firstAttribute="top" secondItem="p2e-YZ-cRA" secondAttribute="bottom" id="FGh-os-KBO"/>
+                            <constraint firstItem="jft-HD-VJC" firstAttribute="trailing" secondItem="7Gg-UB-opa" secondAttribute="trailing" constant="40" id="NHs-ZG-SGo"/>
+                            <constraint firstItem="jft-HD-VJC" firstAttribute="trailing" secondItem="wmA-Wg-sL2" secondAttribute="trailing" id="Ntz-oe-ySd"/>
+                            <constraint firstItem="G3b-dY-Idc" firstAttribute="top" secondItem="jft-HD-VJC" secondAttribute="top" id="R56-2X-xgQ"/>
+                            <constraint firstItem="7Gg-UB-opa" firstAttribute="top" secondItem="wmA-Wg-sL2" secondAttribute="bottom" constant="15" id="Wbo-k0-jbg"/>
+                            <constraint firstItem="jft-HD-VJC" firstAttribute="trailing" secondItem="p2e-YZ-cRA" secondAttribute="trailing" constant="40" id="Wsg-Xf-kPg"/>
+                            <constraint firstItem="FCA-U1-nX6" firstAttribute="leading" secondItem="jft-HD-VJC" secondAttribute="leading" id="ZKK-5K-3GL"/>
+                            <constraint firstItem="FCA-U1-nX6" firstAttribute="trailing" secondItem="jft-HD-VJC" secondAttribute="trailing" id="eLU-kp-7Oh"/>
+                            <constraint firstItem="p2e-YZ-cRA" firstAttribute="leading" secondItem="jft-HD-VJC" secondAttribute="leading" constant="40" id="gcw-W6-N1V"/>
+                            <constraint firstItem="G3b-dY-Idc" firstAttribute="trailing" secondItem="jft-HD-VJC" secondAttribute="trailing" id="gkV-ye-AF2"/>
+                            <constraint firstItem="G3b-dY-Idc" firstAttribute="leading" secondItem="jft-HD-VJC" secondAttribute="leading" id="xLt-2n-f5j"/>
+                            <constraint firstItem="7Gg-UB-opa" firstAttribute="leading" secondItem="jft-HD-VJC" secondAttribute="leading" constant="40" id="yOW-tU-31d"/>
+                            <constraint firstItem="wmA-Wg-sL2" firstAttribute="leading" secondItem="jft-HD-VJC" secondAttribute="leading" id="zUg-5a-8eh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jft-HD-VJC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="72H-8k-F9c"/>
+                    <connections>
+                        <outlet property="animeCollectionView" destination="wmA-Wg-sL2" id="mE6-Tr-F2L"/>
+                        <outlet property="mangaCollectionView" destination="FCA-U1-nX6" id="llm-Ck-5SL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Asa-69-uIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2379.7101449275365" y="-358.25892857142856"/>
+        </scene>
+        <!--Manga-->
+        <scene sceneID="N0h-9P-bGL">
+            <objects>
+                <navigationController storyboardIdentifier="Manga" title="Manga" hidesBarsOnSwipe="YES" id="YFf-ug-MIn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Manga" image="book" catalog="system" id="Ivq-bN-cRx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g63-Ab-mFG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ImU-Eg-the" kind="relationship" relationship="rootViewController" id="Shz-Ep-6zI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULW-zT-dB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2380" y="1040"/>
+        </scene>
+        <!--Anime-->
+        <scene sceneID="WXt-sr-eAj">
+            <objects>
+                <navigationController storyboardIdentifier="Anime" title="Anime" hidesBarsOnSwipe="YES" id="hve-WD-ciM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Anime" image="tv" catalog="system" id="d3G-pH-FE2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ohJ-ul-KCt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Ef-cW-NaZ" kind="relationship" relationship="rootViewController" id="Ncm-z8-t8e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5i-xB-iio" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2380" y="305"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="rsS-Lv-dO4">
+            <objects>
+                <tableViewController id="KeF-cy-J5i" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="70u-Nk-mfH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Sgn-aw-nBb">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="animeReuseID" id="NqA-nV-q2q">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NqA-nV-q2q" id="6dq-lC-Gwp">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KeF-cy-J5i" id="RnL-AO-cG9"/>
+                            <outlet property="delegate" destination="KeF-cy-J5i" id="meT-XI-ngx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="BhJ-NG-316"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fE-Uk-XcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4167" y="305"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="2XM-4n-9VO">
+            <objects>
+                <tableViewController id="dzg-qy-Bit" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8hL-n9-f0x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="sty-Tp-0Cy">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mangaReuseID" id="5b7-l3-ZWy">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5b7-l3-ZWy" id="ZQP-EM-VTi">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dzg-qy-Bit" id="66E-fL-YC2"/>
+                            <outlet property="delegate" destination="dzg-qy-Bit" id="VMv-7p-84a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="s5R-wS-qen"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVG-OH-3C3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4135" y="1040"/>
+        </scene>
+        <!--Anime-->
+        <scene sceneID="eh5-yB-HFt">
+            <objects>
+                <viewController id="2Ef-cW-NaZ" customClass="AnimeViewController" customModule="AniLib" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZrV-4v-MzU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDk-FU-FrR">
+                                <rect key="frame" x="50" y="298" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zih-LS-LNm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find an anime!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBo-un-yts">
+                                <rect key="frame" x="70" y="238" width="274" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="THl-yf-nbM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zBo-un-yts" firstAttribute="leading" secondItem="YPU-sX-cui" secondAttribute="leading" constant="70" id="3SW-QC-qPU"/>
+                            <constraint firstItem="YPU-sX-cui" firstAttribute="trailing" secondItem="hDk-FU-FrR" secondAttribute="trailing" constant="50" id="T7q-Ln-5Xy"/>
+                            <constraint firstItem="zBo-un-yts" firstAttribute="top" secondItem="YPU-sX-cui" secondAttribute="top" constant="150" id="UVh-4y-ti8"/>
+                            <constraint firstItem="YPU-sX-cui" firstAttribute="trailing" secondItem="zBo-un-yts" secondAttribute="trailing" constant="70" id="a8Z-wL-i2T"/>
+                            <constraint firstItem="hDk-FU-FrR" firstAttribute="leading" secondItem="YPU-sX-cui" secondAttribute="leading" constant="50" id="vnh-nP-rBm"/>
+                            <constraint firstItem="hDk-FU-FrR" firstAttribute="top" secondItem="zBo-un-yts" secondAttribute="bottom" constant="10" id="z0I-jb-bno"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YPU-sX-cui"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Anime" image="tv" catalog="system" id="3T1-38-t9D"/>
+                    <navigationItem key="navigationItem" id="Fp9-Mh-adG"/>
+                    <connections>
+                        <segue destination="KeF-cy-J5i" kind="show" identifier="toAnimeTableView" id="q4Y-uO-PO7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deD-Cq-saX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3283" y="305"/>
+        </scene>
+        <!--Manga-->
+        <scene sceneID="llm-df-9t9">
+            <objects>
+                <viewController id="ImU-Eg-the" customClass="MangaViewController" customModule="AniLib" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p0c-7F-uC2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VzP-Jv-fal">
+                                <rect key="frame" x="50" y="298" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3t0-4C-aKo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a manga!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8p-4K-chR">
+                                <rect key="frame" x="70" y="238" width="274" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="A40-Xp-dJR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7CU-77-sRM" firstAttribute="trailing" secondItem="K8p-4K-chR" secondAttribute="trailing" constant="70" id="Ebm-lp-gLo"/>
+                            <constraint firstItem="K8p-4K-chR" firstAttribute="leading" secondItem="7CU-77-sRM" secondAttribute="leading" constant="70" id="G7q-cF-mrt"/>
+                            <constraint firstItem="VzP-Jv-fal" firstAttribute="top" secondItem="K8p-4K-chR" secondAttribute="bottom" constant="10" id="S8L-fM-top"/>
+                            <constraint firstItem="K8p-4K-chR" firstAttribute="top" secondItem="7CU-77-sRM" secondAttribute="top" constant="150" id="SVO-Wu-yh8"/>
+                            <constraint firstItem="7CU-77-sRM" firstAttribute="trailing" secondItem="VzP-Jv-fal" secondAttribute="trailing" constant="50" id="SnK-Uz-hZo"/>
+                            <constraint firstItem="VzP-Jv-fal" firstAttribute="leading" secondItem="7CU-77-sRM" secondAttribute="leading" constant="50" id="hwW-rI-jdB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7CU-77-sRM"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Manga" image="book" catalog="system" id="sjf-PB-6Lo"/>
+                    <navigationItem key="navigationItem" id="NOm-xr-I3k"/>
+                    <connections>
+                        <segue destination="dzg-qy-Bit" kind="show" identifier="toMangaTableView" id="NQ5-It-z9l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jH6-jK-UFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3283" y="1040"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2" width="250" height="250"/>
+        <image name="book" catalog="system" width="128" height="101"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="tv" catalog="system" width="128" height="93"/>
+    </resources>
+</document>
